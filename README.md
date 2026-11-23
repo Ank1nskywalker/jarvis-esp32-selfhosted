@@ -77,9 +77,9 @@ Spanish docs live in [`docs/es/`](docs/es/).
 
 ## 🖼️ Gallery
 
-| The board, stock | Animated eyes | HUD / arc-reactor |
-|---|---|---|
-| ![ESP32 stock](images/esp32-stock.jpg) | ![Animated eyes](images/eyes.jpg) | ![HUD face (live)](assets/hud-jarvis/jarvis_idle.gif) |
+| The board, stock | HUD / arc-reactor (live) |
+|---|---|
+| ![ESP32 stock](images/esp32-stock.jpg) | ![HUD face](assets/hud-jarvis/jarvis_idle.gif) |
 
 ### HUD states (live)
 

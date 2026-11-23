@@ -77,9 +77,9 @@ Las docs en inglés están en [`docs/en/`](docs/en/).
 
 ## 🖼️ Galería
 
-| La placa, de fábrica | Ojos animados | HUD / arc-reactor |
-|---|---|---|
-| ![ESP32 de fábrica](images/esp32-stock.jpg) | ![Ojos animados](images/eyes.jpg) | ![Cara HUD (en vivo)](assets/hud-jarvis/jarvis_idle.gif) |
+| La placa, de fábrica | HUD / arc-reactor (en vivo) |
+|---|---|
+| ![ESP32 de fábrica](images/esp32-stock.jpg) | ![Cara HUD](assets/hud-jarvis/jarvis_idle.gif) |
 
 ### Estados del HUD (en vivo)
 
