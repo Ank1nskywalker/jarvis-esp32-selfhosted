@@ -1,0 +1,9 @@
+# Never commit real secrets or local state
+.config.yaml
+*.key
+*.secret
+.env
+esp32_boot.log
+__pycache__/
+build/
+_emote_backup_*/

@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------------------
+# xiaozhi-esp32-server  ->  data/.config.yaml  (SANITIZED EXAMPLE)
+# ---------------------------------------------------------------------------
+# This is the OVERRIDE file. It merges on top of the base config.yaml that
+# ships inside the Docker image. Only put here what you want to change.
+#
+# Replace every <PLACEHOLDER> with your own value. NEVER commit real keys.
+# ---------------------------------------------------------------------------
+
+selected_module:
+  VAD: SileroVAD
+  ASR: GroqASR
+  LLM: HermesLLM        # your "brain" (any OpenAI-compatible endpoint works)
+  TTS: FishSpeech       # was EdgeTTS; switched to Fish Audio for a better voice
+  Memory: nomem
+  Intent: nointent      # no function-calling -> lower latency for a home assistant
+
+# ----- The assistant's personality / system prompt -------------------------
+prompt: |
+  Sos Jarvis, el asistente personal de voz de Anakin. Hablás SIEMPRE en
+  español rioplatense (vos/tuteo). NUNCA respondas en chino, inglés ni ningún
+  otro idioma. Respuestas breves y naturales para voz, de 1 a 3 oraciones, sin
+  markdown ni emojis. Si no sabés algo, decilo en español.
+
+# ----- ASR: Groq Whisper ----------------------------------------------------
+ASR:
+  GroqASR:
+    type: openai
+    api_key: <YOUR_GROQ_API_KEY>
+    base_url: https://api.groq.com/openai/v1
+    model_name: whisper-large-v3-turbo
+    output_dir: tmp/
+
+# ----- LLM: your own agent / brain (OpenAI-compatible) ----------------------
+LLM:
+  HermesLLM:
+    type: openai
+    api_key: <YOUR_LLM_API_KEY>
+    base_url: http://<YOUR_BRAIN_HOST>:<PORT>/v1   # e.g. a Tailscale IP
+    model_name: <YOUR_MODEL>                       # e.g. a DeepSeek model
+
+# ----- TTS: Fish Audio (via the built-in "fishspeech" provider) -------------
+# The fishspeech provider speaks the Fish Audio cloud protocol out of the box:
+# just point api_url at the cloud and pass your reference_id (the voice model
+# ID from the voice's URL: fish.audio/m/<reference_id>).
+TTS:
+  FishSpeech:
+    type: fishspeech
+    api_url: https://api.fish.audio/v1/tts
+    api_key: <YOUR_FISH_API_KEY>
+    reference_id: <YOUR_FISH_VOICE_ID>   # e.g. 664e713e3a22478f904720e9ecb5aaee
+    response_format: mp3
+    reference_audio: []    # empty -> use the voice model, not a reference clip
+    reference_text: []
+    streaming: true        # start playing sooner
+
+  # Free fallback (no API key needed). Uncomment and set selected_module.TTS
+  # back to EdgeTTS to use it.
+  # EdgeTTS:
+  #   type: edge
+  #   voice: es-AR-TomasNeural
+  #   rate: "15"

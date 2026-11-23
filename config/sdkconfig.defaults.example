@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------------------
+# xiaozhi-esp32  ->  sdkconfig.defaults   (relevant lines for this build)
+# ---------------------------------------------------------------------------
+# Append these to the firmware's sdkconfig.defaults, then delete the existing
+# `sdkconfig` so it is regenerated:   rm -f sdkconfig && idf.py build
+# ---------------------------------------------------------------------------
+
+# --- Board ---
+CONFIG_BOARD_TYPE_WAVESHARE_ESP32_S3_TOUCH_LCD_1_85C=y
+CONFIG_VERSION_2_0=y
+
+# --- Wake word "Jarvis" (esp-sr WakeNet, WN9) ---
+CONFIG_USE_AFE_WAKE_WORD=y
+CONFIG_SR_WN_WN9_JARVIS_TTS=y
+# CONFIG_SR_WN_WN9_NIHAOXIAOZHI_TTS is not set
+
+# --- Point the device at YOUR server, baked into the firmware ---
+# So it still finds the server after a full flash wipes NVS (WiFi + ota_url).
+CONFIG_OTA_URL="http://<YOUR_PI_IP>:8003/xiaozhi/ota/"
+
+# --- Animated eyes (EmoteDisplay) ---
+# These only take effect after the board is added to the USE_EMOTE_MESSAGE_STYLE
+# `depends on` list in main/Kconfig.projbuild (the apply_emote_eyes.sh patch does
+# that for you).
+CONFIG_USE_EMOTE_MESSAGE_STYLE=y
+CONFIG_MMAP_FILE_NAME_LENGTH=32
+CONFIG_FLASH_EXPRESSION_ASSETS=y
