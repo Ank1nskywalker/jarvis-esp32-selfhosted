@@ -10,7 +10,7 @@ On real hardware — idle and speaking:
 
 | Idle | Speaking |
 |---|---|
-| ![HUD idle](../../images/jarvis-hud.jpg) | ![HUD speaking](../../images/jarvis-hud-speaking.jpg) |
+| ![HUD idle](../../assets/hud-jarvis/jarvis_idle.gif) | ![HUD speaking](../../assets/hud-jarvis/jarvis_speaking.gif) |
 
 ## The four states
 

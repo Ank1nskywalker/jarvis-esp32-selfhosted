@@ -79,9 +79,20 @@ Las docs en inglés están en [`docs/en/`](docs/en/).
 
 | La placa, de fábrica | Ojos animados | HUD / arc-reactor |
 |---|---|---|
-| ![ESP32 de fábrica](images/esp32-stock.jpg) | ![Ojos animados](images/eyes.jpg) | ![Cara HUD](images/jarvis-hud.jpg) |
+| ![ESP32 de fábrica](images/esp32-stock.jpg) | ![Ojos animados](images/eyes.jpg) | ![Cara HUD (en vivo)](assets/hud-jarvis/jarvis_idle.gif) |
 
-Las animaciones de los estados del HUD están en [`assets/hud-jarvis/`](assets/hud-jarvis/) (idle · escuchando · pensando · hablando).
+### Estados del HUD (en vivo)
+
+<table>
+  <tr>
+    <td align="center"><b>Idle</b><br><img src="assets/hud-jarvis/jarvis_idle.gif" width="150" alt="HUD idle"></td>
+    <td align="center"><b>Escuchando</b><br><img src="assets/hud-jarvis/jarvis_listening.gif" width="150" alt="HUD escuchando"></td>
+    <td align="center"><b>Pensando</b><br><img src="assets/hud-jarvis/jarvis_thinking.gif" width="150" alt="HUD pensando"></td>
+    <td align="center"><b>Hablando</b><br><img src="assets/hud-jarvis/jarvis_speaking.gif" width="150" alt="HUD hablando"></td>
+  </tr>
+</table>
+
+Los archivos fuente están en [`assets/hud-jarvis/`](assets/hud-jarvis/).
 
 ## 💸 Costo real (running costs)
 

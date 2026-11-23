@@ -79,9 +79,20 @@ Spanish docs live in [`docs/es/`](docs/es/).
 
 | The board, stock | Animated eyes | HUD / arc-reactor |
 |---|---|---|
-| ![ESP32 stock](images/esp32-stock.jpg) | ![Animated eyes](images/eyes.jpg) | ![HUD face](images/jarvis-hud.jpg) |
+| ![ESP32 stock](images/esp32-stock.jpg) | ![Animated eyes](images/eyes.jpg) | ![HUD face (live)](assets/hud-jarvis/jarvis_idle.gif) |
 
-The HUD state animations live in [`assets/hud-jarvis/`](assets/hud-jarvis/) (idle · listening · thinking · speaking).
+### HUD states (live)
+
+<table>
+  <tr>
+    <td align="center"><b>Idle</b><br><img src="assets/hud-jarvis/jarvis_idle.gif" width="150" alt="HUD idle"></td>
+    <td align="center"><b>Listening</b><br><img src="assets/hud-jarvis/jarvis_listening.gif" width="150" alt="HUD listening"></td>
+    <td align="center"><b>Thinking</b><br><img src="assets/hud-jarvis/jarvis_thinking.gif" width="150" alt="HUD thinking"></td>
+    <td align="center"><b>Speaking</b><br><img src="assets/hud-jarvis/jarvis_speaking.gif" width="150" alt="HUD speaking"></td>
+  </tr>
+</table>
+
+Source files live in [`assets/hud-jarvis/`](assets/hud-jarvis/).
 
 ## 💸 Running costs
 
