@@ -59,6 +59,7 @@ flowchart LR
 | 05 | [Voz](docs/es/05-voz.md) | EdgeTTS → Fish Audio, cómo elegir voces |
 | 06 | [Optimización](docs/es/06-optimizacion.md) | El `whois` asesino de 5s, streaming, desglose de latencia |
 | 07 | [Troubleshooting](docs/es/07-troubleshooting.md) | Cada error que tuvimos y cómo lo resolvimos |
+| 08 | [Tema HUD](docs/es/08-tema-hud.md) | Cara arc-reactor opcional — un HUD de 4 estados |
 
 Las docs en inglés están en [`docs/en/`](docs/en/).
 
@@ -73,6 +74,27 @@ Las docs en inglés están en [`docs/en/`](docs/en/).
 5. Elegí una **voz** ([05](docs/es/05-voz.md)) y **optimizá la latencia** ([06](docs/es/06-optimizacion.md)).
 
 ---
+
+## 🖼️ Galería
+
+| La placa, de fábrica | Ojos animados | HUD / arc-reactor |
+|---|---|---|
+| ![ESP32 de fábrica](images/esp32-stock.jpg) | ![Ojos animados](images/eyes.jpg) | ![Cara HUD](images/jarvis-hud.jpg) |
+
+Las animaciones de los estados del HUD están en [`assets/hud-jarvis/`](assets/hud-jarvis/) (idle · escuchando · pensando · hablando).
+
+## 💸 Costo real (running costs)
+
+Un asistente de voz 100% self-hosted por **~$1–4 por mes** — pagás solo lo que usás, sin suscripciones:
+
+| Componente | Costo (uso real) |
+|---|---|
+| 🧠 LLM (DeepSeek) | ~$0.09/mes (≈1.05M tokens en 131 requests) |
+| 🗣️ Voz (Fish Audio) | ~$1–3/mes (≈$0.000015/byte; unos min de audio/día) |
+| 📝 ASR (Groq Whisper) | ~gratis (tier generoso) |
+| 🥧 Raspberry Pi | centavos de electricidad |
+
+Con EdgeTTS la voz es gratis del todo si salteás Fish Audio. Los números salen de los dashboards de este mismo build.
 
 ## 🙏 Créditos
 
