@@ -8,7 +8,7 @@ gallery reads as one set.
 |---|---|
 | `esp32-stock.jpg` | the Waveshare board (stock product render) |
 | `eyes.jpg` | the default animated eyes face |
-| `jarvis-hud.jpg` | the HUD / arc-reactor face, idle |
-| `jarvis-hud-speaking.jpg` | the HUD face, speaking |
+
+The HUD / arc-reactor face is shown as animated GIFs in [`assets/hud-jarvis/`](../assets/hud-jarvis/).
 
 Swap in your own photos keeping the same filenames to update the gallery.
